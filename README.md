@@ -51,7 +51,8 @@ Example output:
 while($true) {
   $x = Get-Content .\miner.log | Where-Object {$_ -like "*Successfully mined*"} | sort -Unique | Out-File .\mined.blocks
   $count = Get-Content .\mined.blocks |  Measure-Object | Select -Exp Count
-  "$(Get-Date): Mined $count blocks ($($($count * 28).ToString('N0')) CTC)"
+  $ctc = ($count * 28).ToString('N0')
+  "$(Get-Date): Mined $count blocks ($ctc CTC)"
   Start-Sleep 60
 }
 ```
