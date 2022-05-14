@@ -12,7 +12,7 @@ Misc PowerShell scripts for Creditcoin 2.0 (Substrate-based implementation).
   --mining-key {your-key-here} `
   --base-path data `
   --prometheus-external 2>&1 `
-  | ForEach-Object { $_ -replace "ΓÇª","..." -replace "Γ¼ç","↓" -replace "Γ¼å","↑" -replace "(ΓÜá∩╕Å|Γ£î∩╕Å|Γ¥ñ∩╕Å|≡ƒÆ╛|≡ƒöì|ΓÜá∩╕Å|≡ƒÆñ|Γ£¿|≡ƒÖî0|≡ƒÄü|≡ƒÖî|ΓÜÖ∩╕Å|Γ£à|Γ¢ô|≡ƒÅ╖|≡ƒôª|≡ƒôï|πÇ╜∩╕Å)","-" -replace "  "," " }
+  | ForEach-Object { $_ -replace "ΓÇª","..." -replace "Γ¼ç","↓" -replace "Γ¼å","↑" -replace "(ΓÜá∩╕Å|Γ£î∩╕Å|Γ¥ñ∩╕Å|≡ƒÆ╛|≡ƒöì|ΓÜá∩╕Å|≡ƒÆñ|Γ£¿|≡ƒÖî0|≡ƒÄü|≡ƒÖî|ΓÜÖ∩╕Å|Γ£à|Γ¢ô|≡ƒÅ╖|≡ƒôª|≡ƒôï|πÇ╜∩╕Å)","-" -replace "  "," " } `
   | Tee-Object -Append .\miner.log
 ```
 
@@ -33,7 +33,7 @@ Example output:
   --mining-key {your-key-here} `
   --base-path data `
   --prometheus-external 2>&1 `
-  | ForEach-Object { $_ -replace "ΓÇª","..." -replace "Γ¼ç","↓" -replace "Γ¼å","↑" -replace "(ΓÜá∩╕Å|Γ£î∩╕Å|Γ¥ñ∩╕Å|≡ƒÆ╛|≡ƒöì|ΓÜá∩╕Å|≡ƒÆñ|Γ£¿|≡ƒÖî0|≡ƒÄü|≡ƒÖî|ΓÜÖ∩╕Å|Γ£à|Γ¢ô|≡ƒÅ╖|≡ƒôª|≡ƒôï|πÇ╜∩╕Å)","-" -replace "  "," " }
+  | ForEach-Object { $_ -replace "ΓÇª","..." -replace "Γ¼ç","↓" -replace "Γ¼å","↑" -replace "(ΓÜá∩╕Å|Γ£î∩╕Å|Γ¥ñ∩╕Å|≡ƒÆ╛|≡ƒöì|ΓÜá∩╕Å|≡ƒÆñ|Γ£¿|≡ƒÖî0|≡ƒÄü|≡ƒÖî|ΓÜÖ∩╕Å|Γ£à|Γ¢ô|≡ƒÅ╖|≡ƒôª|≡ƒôï|πÇ╜∩╕Å)","-" -replace "  "," " } `
   | Tee-Object -Append .\miner.log `
   | Where-Object { $_ -like "*Successfully mined*" }
 ```
